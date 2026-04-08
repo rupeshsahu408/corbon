@@ -399,6 +399,23 @@ export default function Landing() {
               >
                 Sign In
               </Link>
+              <Link
+                to="/how-to-use"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 text-base font-bold rounded-2xl text-white relative overflow-hidden hover:-translate-y-1 transition-all duration-200"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(139,92,246,0.25) 0%, rgba(20,184,166,0.2) 100%)',
+                  border: '1px solid rgba(139,92,246,0.4)',
+                  boxShadow: '0 0 24px rgba(139,92,246,0.15), inset 0 1px 0 rgba(255,255,255,0.1)'
+                }}
+              >
+                <span className="text-xl">📖</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-300 to-teal-300 font-black">
+                  How to Use CarbonFlow
+                </span>
+                <svg className="w-4 h-4 text-violet-400 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </motion.div>
 
             {/* Trust badges */}

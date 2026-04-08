@@ -20,6 +20,7 @@ const SupplierDashboard = lazy(() => import('./pages/SupplierDashboard'))
 const EnterpriseHub = lazy(() => import('./pages/EnterpriseHub'))
 const SupplierMarketplace = lazy(() => import('./pages/SupplierMarketplace'))
 const FinancialImpact = lazy(() => import('./pages/FinancialImpact'))
+const HowToUse = lazy(() => import('./pages/HowToUse'))
 
 function CompanyGate({ children }) {
   const [status, setStatus] = useState('loading') // loading | ok | needs | error
@@ -96,6 +97,7 @@ function App() {
         <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <Login />} />
         <Route path="/signup" element={user ? <Navigate to="/dashboard" replace /> : <Signup />} />
         <Route path="/onboarding" element={<ProtectedRoute><Onboarding /></ProtectedRoute>} />
+        <Route path="/how-to-use" element={<HowToUse />} />
         <Route path="/supplier/:token" element={<SupplierForm />} />
         <Route path="/dashboard" element={<ProtectedRoute><CompanyGate><Dashboard /></CompanyGate></ProtectedRoute>} />
         <Route path="/pro/dashboard" element={<ProtectedRoute><CompanyGate><ProDashboard /></CompanyGate></ProtectedRoute>} />
