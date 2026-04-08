@@ -40,23 +40,39 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 flex">
+    <div className="min-h-screen flex" style={{ background: '#060c16' }}>
       {/* Left panel */}
-      <div className="hidden lg:flex lg:flex-1 bg-gradient-to-br from-slate-900 to-slate-950 border-r border-slate-800 items-center justify-center p-12 relative overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-600/10 rounded-full blur-[100px]" />
+      <div className="hidden lg:flex lg:flex-1 items-center justify-center p-12 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #060c16 0%, #0a1220 100%)', borderRight: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[130px]" style={{ background: 'rgba(16,185,129,0.08)' }} />
+        <div className="absolute bottom-10 right-10 w-64 h-64 rounded-full blur-[100px]" style={{ background: 'rgba(20,184,166,0.05)' }} />
         <div className="relative z-10 max-w-sm text-center">
-          <Link to="/" className="flex items-center gap-3 mb-12 justify-center">
-            <div className="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center shadow-lg shadow-brand-900/50">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <Link to="/" className="inline-flex items-center gap-3 mb-10 justify-center group">
+            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-900/50">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <span className="text-2xl font-bold text-white">CarbonFlow</span>
+            <span className="text-2xl font-black text-white tracking-tight">CarbonFlow</span>
           </Link>
-          <h2 className="text-3xl font-bold text-white mb-4">Track Scope 3 Emissions with Confidence</h2>
-          <p className="text-slate-400 leading-relaxed">
-            Collect supplier data, calculate carbon footprints, and generate audit-ready reports — all in one platform.
+          <h2 className="text-3xl font-black text-white mb-4 leading-tight">
+            India's Most Intelligent<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Carbon Platform</span>
+          </h2>
+          <p className="text-slate-400 leading-relaxed mb-8">
+            Collect supplier data, calculate Scope 3 emissions automatically, and generate BRSR & CDP-ready reports — free for Indian companies.
           </p>
+          <div className="flex flex-col gap-3">
+            {[
+              { icon: '✅', text: 'SEBI BRSR Compliant' },
+              { icon: '🇮🇳', text: 'Free for Indian Companies' },
+              { icon: '⚡', text: 'Setup in under 5 minutes' },
+            ].map(item => (
+              <div key={item.text} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>
+                <span>{item.icon}</span>
+                <span className="text-slate-300 font-medium">{item.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -126,7 +142,8 @@ export default function Login() {
           <button
             onClick={handleGoogleSignIn}
             disabled={googleLoading}
-            className="w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium transition-colors disabled:opacity-50"
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl text-white text-sm font-semibold transition-all duration-200 disabled:opacity-50 hover:-translate-y-0.5"
+            style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
           >
             {googleLoading ? (
               <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />

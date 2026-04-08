@@ -95,7 +95,7 @@ export default function Insights() {
   }
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen page-main">
       <Sidebar />
       <main className="flex-1 overflow-auto">
         <div className="px-8 py-6 border-b border-slate-800">

@@ -227,10 +227,10 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen page-main">
       <Sidebar />
       <main className="flex-1 overflow-auto">
-        <div className="px-8 py-6 border-b border-slate-800 flex items-center justify-between">
+        <div className="px-8 py-6 page-header flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white">Dashboard</h1>
             <p className="text-slate-400 text-sm mt-1">Scope 1, 2 &amp; 3 emissions overview</p>

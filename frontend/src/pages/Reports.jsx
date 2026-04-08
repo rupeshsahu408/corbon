@@ -346,11 +346,11 @@ export default function Reports() {
     : []
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen page-main">
       <Sidebar />
       <main className="flex-1 overflow-auto">
         {/* Header */}
-        <div className="px-8 py-6 border-b border-slate-800 flex items-center justify-between">
+        <div className="px-8 py-6 page-header flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white">Compliance Reports</h1>
             <p className="text-slate-400 text-sm mt-1">Generate audit-ready reports — BRSR, CBAM, Standard</p>
@@ -673,7 +673,7 @@ export default function Reports() {
 
               {/* Supplier table preview */}
               <div className="card p-0 overflow-hidden mb-6">
-                <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                <div className="px-6 py-4 page-header flex items-center justify-between">
                   <h2 className="font-semibold text-white">Supplier Scope Breakdown</h2>
                   <span className="text-xs text-slate-500">{report?.suppliers?.filter(s => s.status === 'completed').length} submitted</span>
                 </div>

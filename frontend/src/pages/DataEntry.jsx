@@ -187,11 +187,11 @@ export default function DataEntry() {
   const totalScope2    = records.reduce((s, r) => s + parseFloat(r.scope2_co2 || 0), 0)
 
   return (
-    <div className="flex min-h-screen bg-slate-950">
+    <div className="flex min-h-screen page-main">
       <Sidebar />
       <main className="flex-1 overflow-auto">
         {/* Header */}
-        <div className="px-8 py-6 border-b border-slate-800 flex items-center justify-between">
+        <div className="px-8 py-6 page-header flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-white">Direct Data Entry</h1>
             <p className="text-slate-400 text-sm mt-1">Record your company's own Scope 1 &amp; 2 emissions</p>
@@ -412,7 +412,7 @@ export default function DataEntry() {
 
           {/* Records table */}
           <div className="card p-0 overflow-hidden">
-            <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+            <div className="px-6 py-4 page-header flex items-center justify-between">
               <h2 className="font-semibold text-white">Recorded Entries</h2>
               <span className="text-xs text-slate-500">{records.length} record(s)</span>
             </div>
